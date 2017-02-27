@@ -174,7 +174,7 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
 The code for making predictions on my final model is located in the 18th cell of the Ipython notebook.
 
 
-For the first image, the model is sure that this is a priority road (probability of 0.99), and the image does contain a Priority road. The top five soft max probabilities were
+ For the first image, the model is sure that this is a priority road (probability of 0.99), and the image does contain a Priority road. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -188,11 +188,11 @@ For the second image, the model is sure that this is a Turn right ahead (probabi
 
 | Probability          |     Prediction              | 
 |:---------------------:|:---------------------------------------------:| 
-| 1            | Turn right ahead            | 
-| .00          | Traffic signals         |
-| .00          |Keep left          |
-| .00          | Right-of-way at the next intersection          |
-| .00          | Speed limit (20km/h)             |
+|1   | Turn right ahead            | 
+|.00 | Traffic signals         |
+|.00 |Keep left          |
+|.00 | Right-of-way at the next intersection          |
+|.00 | Speed limit (20km/h)             |
 
 For the thrid image, the model is sure that this is a Turn left ahead (probability of 0.99), and the image does contain a Turn left ahead. The top five soft max probabilities were
 
@@ -218,7 +218,7 @@ For the fifth image, the model is sure that this is a  Roundabout mandatory  (pr
 
 | Probability          |     Prediction              | 
 |:---------------------:|:---------------------------------------------:| 
-| 1          | Roundabout mandatory            | 
+|   1          | Roundabout mandatory            | 
 | .00        | Priority road        |
 | .00        |Speed limit (20km/h)        |
 | .00        |Right-of-way at the next intersection    |
