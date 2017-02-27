@@ -70,7 +70,7 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
 
-As a last step, I normalized the image data to achieve consistency in dynamic range for all the images. 
+| RELU					|												|As a last step, I normalized the image data to achieve consistency in dynamic range for all the images. 
 
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
@@ -99,8 +99,10 @@ My final model consisted of the following layers:
 | Max pooling	      	| 2x2 stride,valid padding, outputs 5x5x64 				|
 | Fully connected		| Input = 1600. Output = 600					|
 | RELU					|												|
+| Dropout					|												|
 | Fully connected		| Input = 600. Output = 150					|
 | RELU					|												|
+| Dropout					|												|
 | Fully connected		| Input = 150. Output = 43					|
 |						|												|
 
@@ -160,11 +162,11 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Priority road      		| Priority road   									| 
+| Turn right ahead     			| Turn right ahead										|
+| Turn left ahead					| Turn left ahead											|
+| Keep left	      		| Keep left					 				|
+| Roundabout mandatory			| Roundabout mandatory    							|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
@@ -177,11 +179,11 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .60         			| Priority road   									| 
+| .20     				| Turn right ahead 										|
+| .05					|Turn left ahead											|
+| .04	      			| Keep left					 				|
+| .01				    | Roundabout mandatory      							|
 
 
 For the second image ... 
