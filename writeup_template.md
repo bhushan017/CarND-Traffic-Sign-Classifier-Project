@@ -122,20 +122,19 @@ mu         = 0
 signal     = 0.1
 
 learning rate = 0.001
-
 ####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 99.9%
+* validation set accuracy of 95.6%
+* test set accuracy of 94.6%
 
 If a well known architecture was chosen:
 * What architecture was chosen? 
 
- LeNet Architecture.
+ LeNet Architecture. 
 * Why did you believe it would be relevant to the traffic sign application?
 
  LeNet is good at image classification. We are classifying traffic sign images which makes the Lenet architecture ideal for this project.
@@ -156,7 +155,7 @@ The first image might be difficult to classify because ...
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 18th cell of the Ipython notebook.
 
 Here are the results of the prediction:
 
@@ -168,22 +167,59 @@ Here are the results of the prediction:
 | Keep left	      		| Keep left					 				|
 | Roundabout mandatory			| Roundabout mandatory    							|
 
-
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%.
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 18th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+
+For the first image, the model is sure that this is a priority road (probability of 0.99), and the image does contain a Priority road. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Priority road   									| 
-| .20     				| Turn right ahead 										|
-| .05					|Turn left ahead											|
-| .04	      			| Keep left					 				|
-| .01				    | Roundabout mandatory      							|
+| .99         | Priority road   									| 
+| .01     				| Yield 										|
+| .00			      |Roundabout mandatory										|
+| .00	      		| End of no passing by vehicles over 3.5 metric tons					 				|
+| .00				     | End of no passing      							|
 
+For the second image, the model is sure that this is a Turn right ahead (probability of 1), and the image does contain a Turn right ahead. The top five soft max probabilities were
 
-For the second image ... 
+| Probability          |     Prediction              | 
+|:---------------------:|:---------------------------------------------:| 
+| 1            | Turn right ahead            | 
+| .00          | Traffic signals         |
+| .00          |Keep left          |
+| .00          | Right-of-way at the next intersection          |
+| .00          | Speed limit (20km/h)             |
+
+For the thrid image, the model is sure that this is a Turn left ahead (probability of 0.99), and the image does contain a Turn left ahead. The top five soft max probabilities were
+
+| Probability          |     Prediction              | 
+|:---------------------:|:---------------------------------------------:| 
+| .99          | Turn left ahead            | 
+| .01          | Ahead only         |
+| .00          |Roundabout mandatory         |
+| .00          |Keep right          |
+| .00          | Priority road            |
+
+For the fourth image, the model is sure that this is a Keep left (probability of 0.99), and the image does contain a Keep left. The top five soft max probabilities were
+
+| Probability          |     Prediction              | 
+|:---------------------:|:---------------------------------------------:| 
+| .99          | Keep left            | 
+| .01          | Speed limit (50km/h)         |
+| .00          |Speed limit (60km/h)         |
+| .00          |Turn right ahead      |
+| .00          | Children crossing           |
+
+For the fifth image, the model is sure that this is a  Roundabout mandatory  (probability of 1), and the image does contain a  Roundabout mandatory. The top five soft max probabilities were
+
+| Probability          |     Prediction              | 
+|:---------------------:|:---------------------------------------------:| 
+| 1          | Roundabout mandatory            | 
+| .00        | Priority road        |
+| .00        |Speed limit (20km/h)        |
+| .00        |Right-of-way at the next intersection    |
+| .00        | Go straight or left           |
